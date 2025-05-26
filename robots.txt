@@ -1,0 +1,3 @@
+Sitemap: https://kricspartywall.com/sitemap.xml
+User-agent: *
+Disallow: /assets

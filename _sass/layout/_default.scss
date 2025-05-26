@@ -1,0 +1,40 @@
+/* _sass/main.scss */
+
+/* Example variables */
+$primary-color: #3498db;
+$background-color: #f4f4f4;
+
+/* Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: $background-color;
+  color: #333;
+  padding: 20px;
+}
+
+/* Header Styling */
+h1 {
+  text-align: center;
+  font-size: 3em;
+  color: $primary-color;
+  margin-bottom: 20px;
+}
+
+/* Paragraph Styling */
+p {
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.5em;
+  }
+
+  p {
+    font-size: 1.1em;
+  }
+}

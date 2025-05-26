@@ -1,0 +1,13 @@
+// Variables
+$primary-color: #3498db;
+$background-color: #f4f4f4;
+$text-color: #000000;
+
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,500,600|Open+Sans:300,400,600|Roboto+Slab:300,400,600|Karla:300,400,500,600|Montserrat:300,400,500,600|Nunito+Sans:300,400,500,600|Quicksand:300,400,500,600|Istok+Web:300,400,500,600|Hind:300,400,500,600|EB+Garamond:300,400,500,600|Neuton:300,400,500,600&display=swap');
+
+
+// Global Styles
+html, body, p, div, button, input, optgroup, select, textarea { font-family: $text-font-default; font-size: 16px; }
+body { background-color: $background-color; color: $text-color; }

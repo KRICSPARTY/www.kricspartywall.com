@@ -1,0 +1,55 @@
+# General configuration
+title: KRICS Party Wall Surveyors Ltd
+description: A brief description of your site
+url: "https://kricspartywall.com"
+baseurl: ""  # The subpath of your site (e.g., /blog). Leave empty if it's the root.
+
+# Sitemap configuration (for jekyll-sitemap)
+sitemap:
+  exclude:
+    - "/drafts/*"  # Exclude any drafts or pages you don't want in the sitemap
+
+# SEO Configuration (for jekyll-seo-tag)
+seo:
+  title: "KRICS Party Wall Surveyors Ltd"
+  description: "A brief description of your site"
+  keywords: "jekyll, seo, blog, static site"  # Define 'keywords' front matter in each page for individual keywords
+  #twitter:
+  #  username: "YourTwitterHandle"  # Optional: Set your Twitter handle
+  #facebook:
+  #  app_id: "YourFacebookAppID"  # Optional: Facebook app ID if available
+
+# Minification settings (for jekyll-minifier)
+# minify_html: true
+# minify_css: true
+# minify_js: true
+
+# Plugins section to enable the gems
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  # - jekyll-minifier
+
+# Exclude files or directories from being processed by Jekyll
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - README.md
+
+# Default layout for pages - values will apply to all pages unless overridden in an individual page's front matter.
+defaults:
+  - scope:
+      path: ""
+      extension: ".html"
+    values:
+      layout: "default"  # Default layout for general pages
+      #title: "KRICS Party Wall Surveyors Ltd"  # we will define title on all pages - so, we won't need this...
+      description: "A brief description of your site"  # Default description
+
+# Google Analytics configuration
+google_analytics: UA-XXXXXXXX-X  # Replace with your actual Google Analytics tracking ID
+
+# Scss configuration
+sass:
+  sass_dir: _sass
+  style: compressed  # possible values: nested expanded compact compressed

@@ -1,0 +1,101 @@
+---
+layout: default
+title: Contact Us
+permalink: /contact
+custom_script: |
+    <script>
+        if (typeof jQuery !== 'undefined') {
+            // console.log('jQuery is available');
+
+            $('#contact_form').on('submit', function(e) {
+                e.preventDefault();
+                var href = $(this).attr("action");
+                var formData = $(this).serialize(); // Serialize the form data
+
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    url: href,
+                    data: $(this).serialize(),
+                    success: (response) => {
+                        if (response.status == "success") {
+                            var currentUrl = window.location.href;
+                            var baseUrl = currentUrl.substring(0, currentUrl.lastIndexOf('/'));  // Remove the current page's file name
+
+                            console.log('Form submitted successfully:', response);
+                            console.log('Redirecting to :', baseUrl + '/thanks');
+
+                            window.location.href = baseUrl + '/thanks';
+                        }
+                        else {
+                            $('#contact_form_error').text('Something went wrong while submitting the form! Please try again later. ' + response.message).removeClass('d-none');
+                        }
+                    },
+                    error: (err) => {
+                        $('#contact_form_error').text('Something went wrong! Please try again later. ' + err).removeClass('d-none');
+                    }
+                });
+            });
+        }
+    </script>
+---
+
+<main class="no-banner">
+    <!-- visual/banner of the page -->
+    {% include page-banner.html %}
+    <!--/visual/banner of the page -->
+
+    <!-- main content wrapper -->
+    <div class="content-wrapper">
+        <section class="content-block pt-0">
+            <div class="container">
+                <div class="contact-container">
+                    <!--<h6 class="content-title contact-title">GET IN TOUCH WITH US</h6>-->
+                    <div class="row">
+                        <div class="col-lg-5 col-xl-5">
+                            <h4>KRICS Party Wall Surveyors LTD</h4>
+                            <div class="info-slot">
+                                <div class="icon"><span class="custom-icon-phone"></span></div>
+                                <div class="text">
+                                    <a class="text-black" href="tel:07352451647">Call us at <b>07352451647</b></a>
+                                </div>
+                            </div>
+                            <div class="info-slot">
+                                <div class="icon"><span class="custom-icon-message"></span></div>
+                                <div class="text">
+                                    <a class="text-black" href="mailto:info@kricspartywall.com">Email us at <b>info@kricspartywall.com</b></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 offset-lg-2 col-xl-5 offset-xl-2">
+                            <h4 class="xs-padding-top">Send a message to us</h4>
+
+                            <form method="POST" id="contact_form" class="WebDev_contact-form" action="https://formcarry.com/s/ze5IH9eLtSD">
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control" placeholder="NAME *" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" name="phone" class="form-control" placeholder="PHONE NUMBER *" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control" placeholder="EMAIL ADDRESS *" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" name="message" placeholder="MESSAGE *" required></textarea>
+                                </div>
+                                <div class="btn-container">
+                                    <button type="submit" class="btn btn-trans-black has-radius-small btn-arrow">SEND MESSAGE</button>
+                                </div>
+                            </form>
+
+                            <div class="alert alert-danger mt-4 d-none" role="alert" id="contact_form_error">
+                                Something went wrong! Please try again later.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--/main content wrapper -->
+</main>

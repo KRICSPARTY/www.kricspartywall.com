@@ -1,0 +1,238 @@
+<!-- _layouts/default.html -->
+
+<!-- Inspired from: https://template-preview.com/bootstrap-templates/nouvelle/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+
+    {% seo %} <!--  This plugin generates title, description, author and open graph tags -->
+
+    <link rel="shortcut icon" href="/assets/images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/assets/images/ico/apple-touch-icon-57-precomposed.png">
+
+    <!-- Font Icons -->
+    <link media="all" rel="stylesheet" href="assets/css/fonts/icomoon/icomoon.css">
+    <link media="all" rel="stylesheet" href="assets/css/fonts/webdev-font-icon/webdev-font.css">
+    <link media="all" rel="stylesheet" href="assets/libs/font-awesome/css/all.min.css">
+
+    <!-- Libraries -->
+    <link media="all" rel="stylesheet" href="assets/libs/owl-carousel/dist/assets/owl.carousel.min.css">
+    <link media="all" rel="stylesheet" href="assets/libs/owl-carousel/dist/assets/owl.theme.default.min.css">
+    <link media="all" rel="stylesheet" href="assets/libs/animate/animate.css">
+    <link media="all" rel="stylesheet" href="assets/libs/rateyo/jquery.rateyo.css">
+    <link media="all" rel="stylesheet" href="assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.css">
+    <link media="all" rel="stylesheet" href="assets/libs/fancyBox/source/jquery.fancybox.css">
+    <link media="all" rel="stylesheet" href="assets/libs/fancyBox/source/helpers/jquery.fancybox-thumbs.css">
+
+    <!-- Bootstrap -->
+    <link media="all" rel="stylesheet" href="assets/css/bootstrap.css">
+
+    <!-- Rev Slider -->
+    <link rel="stylesheet" type="text/css" href="assets/libs/rev-slider/revolution/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="assets/libs/rev-slider/revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="assets/libs/rev-slider/revolution/css/navigation.css">
+
+    <!-- Theme CSS -->
+    <link media="all" rel="stylesheet" href="assets/css/main.css">
+    <link media="all" rel="stylesheet" href="{{ 'assets/css/styles.css' }}">
+</head>
+
+<body class="white-overlay">
+    <!-- <body class="white-overlay"> -->
+    <div class="preloader" id="pageLoad">
+        <div class="holder">
+            <div class="coffee_cup"></div>
+        </div>
+    </div>
+    <!-- main wrapper -->
+    <div id="wrapper" class="no-overflow-x">
+        <div class="page-wrapper">
+            <!-- header of the page -->
+            <header class="fixed-top main-header header-white transparent with-side-panel-ico{% if page.url != '/' %} sticky-nav{% endif %}" id="WebDev-main-header">
+                <!-- <header class="fixed-top main-header header-white transparent with-side-panel-ico sticky-nav" id="WebDev-main-header"> -->
+                <div id="nav-section">
+                    <div class="bottom-header container-fluid mega-menus" id="mega-menus">
+                        <nav class="navbar navbar-toggleable-md no-border-radius no-margin mega-menu-multiple" id="navbar-inner-container">
+                            <button type="button" class="navbar-toggler navbar-toggler-left" data-toggle="collapse" data-target="#mega-menu">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <a class="navbar-brand mr-auto m-sm-auto" href="index.html">
+                                <img class="logo" src="assets/images/logo/logo-with-text-white.v2.svg" alt="">
+                                <img class="logo" src="assets/images/logo/logo-with-text-color.v2.svg" alt="">
+                            </a>
+                            <div class="collapse navbar-collapse flex-row-reverse" id="mega-menu">
+                                <ul class="nav navbar-nav">
+                                    <li class="dropdown" data-animation="fadeIn">
+                                        <a href="/" data-title="Home"> Home </a>
+                                    </li>
+                                    <li class="dropdown" data-animation="fadeIn">
+                                        <a href="about"> About Us </a>
+                                    </li>
+                                    <li class="dropdown" data-animation="fadeIn">
+                                        <a href="party-wall-act"> Party Wall etc. Act 1996 </a>
+                                    </li>
+                                    <li class="dropdown" data-animation="fadeIn">
+                                        <a href="services"> Services </a>
+                                    </li>
+                                    <!--
+                                    <li class="dropdown right-dropdown" data-animation="fadeIn">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="blog.html" data-title="Home"> Blog </a>
+                                        <ul class="dropdown-menu no-border-radius">
+                                            <li><a href="blog.html"> Blog Page </a></li>
+                                            <li><a href="post.html"> Post Page</a></li>
+                                        </ul>
+                                    </li>
+                                    -->
+                                    <li>
+                                        <a href="contact"> Contact Us </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <!--/header of the page -->
+            <main>
+                {{ content }}
+            </main>
+        </div>
+        <!-- footer of the pagse -->
+        <footer class="footer footer-v1 footer-v2">
+            <div class="content-block footer-main pb-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="footer-logo mt-2">
+                                <img class="logo" src="assets/images/logo/logo-with-text-white.v2.svg" alt="">
+                            </div>
+                            <div class="my-4">
+                                <p>KRICS PARTY WALL SURVEYORS LTD is Registered in England & Wales</p>
+                                <p>Company No. 15072368</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <h4>Contact Information</h4>
+                            <div class="footer-nav">
+                                <ul>
+                                    <li><a href="tel:07352451647"><i class="fa fa-phone"></i>&nbsp;07352451647</a></li>
+                                    <li><a href="mailto:info@kricspartywall.com"><i class="fa fa-envelope"></i>&nbsp;info@kricspartywall.com</a></li>
+                                </ul>
+                                <br />
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <h4>Important Links</h4>
+                            <div class="footer-nav">
+                                <ul>
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="about">About Us</a></li>
+                                    <li><a href="contact">Contact Us</a></li>
+                                    <li><a href="privacy">Privacy Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 pb-3">
+                                <p>&copy; Copyright <span id="year">2025</span> - All rights reserved </p>
+                            </div>
+                            <div class="col-md-6">
+                                <!--
+                                <ul class="social-network with-text">
+                                    <li><a href="#"><span class="icon-pinterest"></span></a></li>
+                                    <li><a href="#"><span class="icon-dribbble"></span></a></li>
+                                    <li><a href="#"><span class="icon-facebook"></span></a></li>
+                                    <li><a href="#"><span class="icon-twitter"></span></a></li>
+                                    <li><a href="#"><span class="icon-google-plus"></span></a></li>
+                                </ul>
+                                -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--/footer of the page -->
+    </div>
+    <!-- open/close -->
+    <!--
+    <div class="search-form-wrapper overlay overlay-hugeinc">
+        <button type="button" class="overlay-close"><span class="custom-icon-plus"></span></button>
+        <div class="search-form">
+            <form action="#" method="post">
+                <div class="form-group">
+                    <input type="search" class="form-control" placeholder="Enter Your Search">
+                    <button type="submit"><span class="icon-search"></span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    -->
+    <a href="#" class="section-scroll" id="scroll-to-top"><i class="fa fa-angle-up"></i></a>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="assets/libs/jquery/jquery-2.1.4.min.js"></script>
+
+    <!-- Libraries -->
+    <script type="text/javascript" src="assets/libs/tether/dist/js/tether.min.js"></script>
+    <script type="text/javascript" src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/libs/stellar/jquery.stellar.min.js"></script>
+    <script type="text/javascript" src="assets/libs/isotope/javascripts/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" src="assets/libs/isotope/javascripts/packery-mode.pkgd.js"></script>
+    <script type="text/javascript" src="assets/libs/owl-carousel/dist/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="assets/libs/waypoint/waypoints.min.js"></script>
+    <script type="text/javascript" src="assets/libs/counter-up/jquery.counterup.min.js"></script>
+    <script type="text/javascript" src="assets/libs/fancyBox/source/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="assets/libs/fancyBox/source/helpers/jquery.fancybox-thumbs.js"></script>
+    <script type="text/javascript" src="assets/libs/image-stretcher-master/image-stretcher.js"></script>
+    <script type="text/javascript" src="assets/libs/wow/wow.min.js"></script>
+    <script type="text/javascript" src="assets/libs/rateyo/jquery.rateyo.min.js"></script>
+    <script type="text/javascript" src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="assets/libs/bootstrap-slider-master/src/js/bootstrap-slider.js"></script>
+    <script type="text/javascript" src="assets/libs/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="assets/libs/retina/retina.min.js"></script>
+    <script type="text/javascript" src="assets/js/mega-menu.js"></script>
+
+    <!-- REVOLUTION JS FILES -->
+    <script type="text/javascript" src="assets/libs/rev-slider/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="assets/libs/rev-slider/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script type="text/javascript" src="assets/libs/rev-slider/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="assets/libs/rev-slider/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script type="text/javascript" src="assets/libs/rev-slider/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script type="text/javascript" src="assets/libs/rev-slider/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="assets/libs/rev-slider/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script type="text/javascript" src="assets/libs/rev-slider/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="assets/libs/rev-slider/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript" src="assets/libs/rev-slider/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="assets/libs/rev-slider/revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+    <!-- SNOW ADD ON -->
+    <script type="text/javascript" src="assets/libs/rev-slider/revolution-addons/snow/revolution.addon.snow.min.js"></script>
+
+    <!-- Revolution Slider Script -->
+    <script type="text/javascript" src="assets/js/revolution.js"></script>
+
+    <!-- Custom Script -->
+    <script type="text/javascript" src="assets/js/jquery.main.js"></script>
+
+    <!-- Placeholder for custom scripts -->
+    {{ page.custom_script }}
+</body>
+
+</html>
